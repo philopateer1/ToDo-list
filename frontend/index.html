@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>To-Do list</title>
+    <script defer src="frontend.js"></script>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <h1>To-Do list</h1>
+    <p>You can add the tasks you want to do and then mark them as finished or pending and if you want to you can delete the task of course.</p>
+    <h2>To add a task just type in the task you want in the input below and create it</h2>
+    <form id="taskForm">
+      <input type="text" id="taskInput" placeholder="create a task" />
+      <button id="createBtn" type="submit">create</button>
+    </form>
+    <input type="search" placeholder="search..." id="search" style="margin-top: 2%;">
+    <div id="messageContainer"></div>
+    <div id="container"></div>
+</body>
+</html>

@@ -1,0 +1,4 @@
+# Node modules
+node_modules/
+/data/
+data/tasks.json

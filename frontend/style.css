@@ -1,0 +1,163 @@
+body {
+    margin: 0;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-color: #f5f7fa;
+    color: #333;
+    text-align: center;
+}
+
+#container {
+    margin-top: 4%;
+    height: auto;
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    row-gap: 30px;
+}
+
+.task {
+    width: 90%;
+    max-width: 320px;
+    font-size: 4vw;
+    padding: 20px 15px;
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    background-color: #fff;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+    cursor: default;
+    text-align: center;
+    gap: 1rem;
+}
+
+.task:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 16px rgba(0,0,0,0.15);
+}
+
+.buttonDiv {
+    width: 90%;
+    max-width: 320px;
+    display: flex;
+    justify-content: space-around;
+    box-sizing: border-box;
+    margin-top: 10px;
+}
+
+.pending {
+    background-color: #f0ad4e;
+    color: #fff;
+    border-radius: 6px;
+    padding: 8px 12px;
+    font-weight: 600;
+    box-shadow: 0 2px 6px rgba(180, 87, 11, 0.5);
+}
+
+.finished {
+    background-color: #5cb85c;
+    color: #fff;
+    border-radius: 6px;
+    padding: 8px 12px;
+    font-weight: 600;
+    box-shadow: 0 2px 6px rgba(6, 139, 1, 0.5);
+}
+
+.pendingBtn, .finishedBtn, .deleteBtn {
+    font-size: large;
+    border: none;
+    color: white;
+    padding: 10px 20px;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: background-color 0.3s ease, box-shadow 0.3s ease;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+    max-width: 100px;
+}
+
+.pendingBtn:hover {
+    background-color: #d4882a;
+    box-shadow: 0 6px 12px rgba(180, 87, 11, 0.7);
+}
+
+.finishedBtn:hover {
+    background-color: #4cae4c;
+    box-shadow: 0 6px 12px rgba(6, 139, 1, 0.7);
+}
+
+.deleteBtn:hover {
+    background-color: #c9302c;
+    box-shadow: 0 6px 12px rgba(150, 6, 6, 0.7);
+}
+
+/* Responsive adjustments */
+@media (max-width: 600px) {
+    .task {
+        font-size: 8.5vw;
+        width: 100%;
+        padding: 15px 10px;
+    }
+
+    .buttonDiv {
+        width: 100%;
+        flex-direction: column;
+        gap: 10px;
+        align-items: center;
+    }
+
+    .pendingBtn, .finishedBtn, .deleteBtn {
+        width: 80%;
+        font-size: medium;
+    }
+}
+
+/* Styling for create button and input */
+#taskInput {
+  padding: 8px 12px;
+  font-size: 16px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  width: 250px;
+  margin-right: 8px;
+  box-sizing: border-box;
+}
+
+.hide{
+    display: none;
+}
+
+#createBtn {
+  padding: 8px 16px;
+  font-size: 16px;
+  background-color: #007bff;
+  color: white;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+#createBtn:hover {
+  background-color: #0056b3;
+}
+
+/* Styling for search bar */
+#search {
+  width: 300px;
+  padding: 8px 12px;
+  font-size: 16px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  margin-bottom: 16px;
+  box-sizing: border-box;
+  transition: border-color 0.3s ease;
+}
+
+#search:focus {
+  border-color: #007bff;
+  outline: none;
+  box-shadow: 0 0 5px rgba(0, 123, 255, 0.5);
+}
